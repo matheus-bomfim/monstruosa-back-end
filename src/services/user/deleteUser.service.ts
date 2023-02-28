@@ -11,4 +11,4 @@ const deleteUserService = async (userId: string) => {
     await userRepository.delete({id:userId});
 }
 
-export default deleteUserService
+export default deleteUserService;

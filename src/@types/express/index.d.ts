@@ -1,11 +1,15 @@
 import * as express from "express";
-import { IUserRequest } from "../../interfaces/user.interface";
+import { IPublisRequest } from "../../interfaces/publis.interface";
+import { ILogin, IUserAuth, IUserRequest } from "../../interfaces/user.interface";
 
 
 declare global{
     namespace Express{
         interface Request{
-            user:IUserRequest;
+            user:IUserAuth,
+            newUser:IUserRequest,
+            publis:IPublisRequest,
+            login: ILogin
         }
     }
 }

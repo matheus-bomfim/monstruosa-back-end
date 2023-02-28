@@ -1,6 +1,7 @@
 import {PrimaryGeneratedColumn,Column,Entity,CreateDateColumn, OneToMany} from "typeorm"
 import {v4 as uuid} from "uuid"
 import { Publis } from "./publis.entity";
+import { Exclude } from "class-transformer";
 
 @Entity("users")
 export class User {
@@ -14,6 +15,7 @@ export class User {
     email: string;
 
     @Column()
+    @Exclude()
     password:string
 
     @Column()

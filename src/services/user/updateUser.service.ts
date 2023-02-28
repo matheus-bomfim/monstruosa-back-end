@@ -3,14 +3,14 @@ import { IUserUpdateRequest } from "../../interfaces/user.interface"
 import { userRepository } from "../../utils/repositories/repositories"
 import { hash } from "bcryptjs"
 
-const updateUserService = async (userId: string , data: IUserUpdateRequest) => {
+const updateUserService = async (userId:string,data:IUserUpdateRequest) => {
     const findUser = await userRepository.findOneBy({
         id:userId
     });
 
     if(!findUser){
         throw new AppError(404,"Usuário não encontrado");
-    }
+    };
     
     let cryptPassword = null;
     
@@ -29,7 +29,9 @@ const updateUserService = async (userId: string , data: IUserUpdateRequest) => {
 
     await userRepository.update({id:userId},updateObject);
 
+    delete updateObject.password
+
     return updateObject;
 }
 
-export default updateUserService
+export default updateUserService;

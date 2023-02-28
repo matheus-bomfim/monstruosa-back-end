@@ -10,13 +10,13 @@ const createUserService = async (user:IUserRequest) => {
         throw new AppError(400,"Usuário já existente");
     };
 
-    const cryptPassword = await hash(user.password,10)
+    const cryptPassword = await hash(user.password,10);
 
     const createUser = userRepository.create({...user,password:cryptPassword});
 
     await userRepository.save(createUser);
 
-    return createUser
+    return createUser;
 }
 
 export default createUserService

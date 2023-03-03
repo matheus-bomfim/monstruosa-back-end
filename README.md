@@ -1,4 +1,4 @@
-# Monstruosa-Back-End
+# Monstruosa-Back-End, Um Projeto feito com TypeScript e Express
 
 Para inciar este projeto, é necessário ter o Docker e o Docker-Compose em seu pc.
 

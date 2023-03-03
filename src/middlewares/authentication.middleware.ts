@@ -8,8 +8,6 @@ const authenticationMiddleware = async (req:Request,res:Response,next:NextFuncti
     const token = req.headers.authorization;
     
     const decode = Object(jwt.decode(token!));
-
-    console.log(decode)
     
     const findUser = await userRepository.findOneBy({
         id:decode.id

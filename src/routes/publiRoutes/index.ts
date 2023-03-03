@@ -9,7 +9,7 @@ import publiSchema from "../../schemas/publi.schema";
 
 const publiRoute = Router();
 
-publiRoute.get("",authenticationMiddleware,listPublisController)
+publiRoute.get("",listPublisController)
 publiRoute.post("",publiSchemaMiddleware(publiSchema),authenticationMiddleware,createPublisController);
 publiRoute.patch("/:id",authenticationMiddleware,updatePublisController)
 publiRoute.delete("/:id",authenticationMiddleware,deletePublisController)

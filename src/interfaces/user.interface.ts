@@ -7,7 +7,7 @@ export interface IUserRequest{
     city: string;
     isAdm: boolean;
     isAthlete: boolean;
-    athlete: string;
+    athlete?: string;
 }
 
 export interface IUserUpdateRequest{

@@ -1,12 +1,17 @@
-# monstruosa-back-end
+# Monstruosa-Back-End
 
 Para inciar este projeto, é necessário ter o Docker e o Docker-Compose em seu pc.
+
+Antes de buildar criar um arquivo .env seguindo o .en.example
 
 Basta buildar e subir nossos containers usando o comando padrão:
 
 docker-compose up --build
 
 ATENÇÃO: a porta utilizada para rodar nosso docker é a 5433. Caso tenha algum problema com essa porta, basta alterá-la no docker-compose.yml.
+
+
+
 
 
 Sobre os testes
